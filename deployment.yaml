@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: app-container
-        image: lukszyd/complete-prodcution-e2e-pipeline-github-actions:latest
+        image: lukszyd/complete-prodcution-e2e-pipeline-github-actions:1.0.0-18
         ports:
         - containerPort: 8080
