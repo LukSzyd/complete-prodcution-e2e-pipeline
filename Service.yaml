@@ -1,15 +1,13 @@
-apiVersion: v1
+ apiVersion: v1
 kind: Service
 metadata:
   name: complete-prodcution-e2e-pipeline-github-actions
-  labels:
-    run: complete-prodcution-e2e-pipeline-github-actions
 spec:
   type: NodePort
   ports:
-  - port: 8080
-    targetPort: 4444
-    protocol: TCP
-    name: http
+    - port: 5555   # Exposed port on the Node (external access)
+      targetPort: 8080   # Port your application is listening on within the Pod
+      protocol: TCP
+      name: http
   selector:
-    run: complete-prodcution-e2e-pipeline-github-actions
+    app: complete-prodcution-e2e-pipeline-app    # Label selector to match pods running your application
