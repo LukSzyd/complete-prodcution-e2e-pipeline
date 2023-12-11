@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: complete-prodcution-e2e-app-service
 spec:
-  type: LoadBalancer
-  ports:
-  - port: 5555
-    targetPort: 8080
-    protocol: TCP
-    name: http
   selector:
     app: complete-prodcution-e2e-app
+  ports:
+  - protocol: TCP
+    port: 5555
+    targetPort: 8080
+  type: NodePort  

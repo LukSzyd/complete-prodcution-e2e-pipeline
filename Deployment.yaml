@@ -3,21 +3,17 @@ kind: Deployment
 metadata:
   name: complete-prodcution-e2e-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      run: complete-prodcution-e2e-app
+      app: complete-prodcution-e2e-app
   template:
     metadata:
       labels:
-        run: complete-prodcution-e2e-app
+        app: complete-prodcution-e2e-app
     spec:
       containers:
-      - name: complete-prodcution-e2e-app
+      - name: app-container
         image: lukszyd/complete-prodcution-e2e-pipeline-github-actions:latest
-        resources:
-         limits:
-          memory: "256Mi"
-          cpu: "500m"
         ports:
-          - containerPort: 8080
+        - containerPort: 8080
