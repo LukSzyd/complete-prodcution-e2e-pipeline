@@ -1,9 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: complete-prodcution-e2e-pipeline-github-actions
-  labels:
-    run: complete-prodcution-e2e-pipeline-github-actions
+  name: complete-prodcution-e2e-app-service
 spec:
   type: NodePort
   ports:
@@ -13,4 +11,3 @@ spec:
     name: http
   selector:
     app: complete-prodcution-e2e-pipeline-app
-    run: complete-prodcution-e2e-pipeline-github-actions
