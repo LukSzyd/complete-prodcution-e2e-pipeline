@@ -20,4 +20,4 @@ spec:
           memory: "256Mi"
           cpu: "500m"
         ports:
-          - containerPort: 9000
+          - containerPort: 7000
