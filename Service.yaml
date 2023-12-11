@@ -10,4 +10,4 @@ spec:
     protocol: TCP
     name: http
   selector:
-    app: complete-prodcution-e2e-pipeline-app
+    app: complete-prodcution-e2e-app
