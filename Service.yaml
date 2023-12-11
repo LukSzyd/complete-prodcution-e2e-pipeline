@@ -9,4 +9,4 @@ spec:
   - protocol: TCP
     port: 5555
     targetPort: 8080
-  type: NodePort  
+  type: NodePort
