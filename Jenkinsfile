@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "jenkins-agent"
+        label "testowy-agent"
     }
 	environment{
 		APP_NAME = "complete-prodcution-e2e-pipeline-github-actions"
