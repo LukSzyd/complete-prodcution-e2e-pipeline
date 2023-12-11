@@ -15,7 +15,7 @@ pipeline {
 		
 		stage("Checkout from SCM"){
             steps {
-                git branch: 'master', credentialsId: 'github', url: 'https://github.com/LukSzyd/complete-prodcution-e2e-pipeline'
+                git branch: 'master', credentialsId: 'github_credentials', url: 'https://github.com/LukSzyd/complete-prodcution-e2e-pipeline'
             }
         }
 		
@@ -38,7 +38,7 @@ pipeline {
 					git add deployment.yaml
 					git commit -m "Updated Deployment Manifest"
 				"""
-				withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolname: 'Default')]) {
+				withCredentials([gitUsernamePassword(credentialsId: 'github_credentials', gitToolname: 'Default')]) {
 					sh "git push https://github.com/LukSzyd/complete-prodcution-e2e-pipeline master" 
 				}
 			}
