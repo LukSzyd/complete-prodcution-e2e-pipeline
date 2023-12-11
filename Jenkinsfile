@@ -38,7 +38,7 @@ pipeline {
 					git add deployment.yaml
 					git commit -m "Updated Deployment Manifest"
 				"""
-				withCredentials([gitUsernamePassword(credentialsId: 'github—pat', gitToolname: 'Default')]) {
+				withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolname: 'Default')]) {
 					sh "git push https://github.com/LukSzyd/complete-prodcution-e2e-pipeline master" 
 				}
 			}
